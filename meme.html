@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/modal.css" />
+    <link rel="stylesheet" href="/css/meme.css" />
+    <link rel="icon" type="image/x-icon" href="/images/Icon.PNG" />
+    <link rel="stylesheet" href="/css/loading.css" />
+    <link
+      rel="stylesheet"
+      href="/css/bootstrap-icons.min.css"
+    />
+    <script
+      src="/js/html2canvas.min.js"
+      onload="startApp()"
+    ></script>
+    <title>Poof The Bear | Memes</title>
+  </head>
+
+  <body>
+    <div id="content">
+      <nav>
+        <a href="/index.html" class="back-button header-el hidden net2"
+          ><i class="bi bi-arrow-left-short"></i> GO BACK HOME</a
+        >
+        <div class="hidden">
+          <img class="logo" src="/images/Logo.png" />
+          <div class="slogan">MEME GENERATOR</div>
+        </div>
+        <div class="header-el"></div>
+      </nav>
+
+      <div class="modal-container hidden">
+        <div class="modal-image-container">
+          <div class="modal-tuto-text">
+            <img class="arrow" src="Imgs/Arrow.png" alt="" />
+            <span class="stobe-animation"
+              >Click on any place in the image to write</span
+            >
+          </div>
+          <div
+            id="mainImage"
+            class="modal-image"
+            style="background-image: url(/images/1.png)"
+          ></div>
+          <div class="modal-tuto-text modal-tuto-text-right">
+            <span class="stobe-animation">CHOOSE AN IMAGE YOU want to use</span>
+            <img class="arrow" src="Imgs/Arrow_down.png" alt="" width="100px" />
+          </div>
+        </div>
+        <div class="editor-section">
+          <div class="text-editor-font-rotate">
+            <div class="font-editor">
+              <label class="editor-label">FONT: </label>
+              <select name="font" id="font-editor-select">
+                <option value='"Gill Sans", sans-serif'>Gill Sans</option>
+                <option value="Menco_Black">Menco Black</option>
+                <option value="cutsey">Cutsey</option>
+                <option value="cuteDino">Cute Dino</option>
+                <option value="comic">Comic sans ms</option>
+                <option value="newImpact">Impact</option>
+              </select>
+            </div>
+            <div class="text-rotation">
+              <label class="editor-label">ROTATE: </label>
+              <div class="editor-label-input-container">
+                <input
+                  type="number"
+                  max="360"
+                  min="-360"
+                  class="text-rotation-input"
+                  value="0"
+                />
+                <label>%</label>
+              </div>
+            </div>
+          </div>
+          <div class="text-editor">
+            <label class="editor-label">SIZE: </label>
+            <div class="size-editor">
+              <div class="decrease-size">-</div>
+              <div class="text-size">
+                <span class="current-text-size" contenteditable="true">25</span
+                ><span> PX</span>
+              </div>
+              <div class="increase-size">+</div>
+            </div>
+          </div>
+          <div class="text-editor-weight-color">
+            <div class="color-editor">
+              <div class="color-editor-black"></div>
+              <div class="color-editor-white"></div>
+            </div>
+            <div class="weight-editor">
+              <strong>Bold</strong>
+              <i>Italic</i>
+            </div>
+          </div>
+        </div>
+        <div class="modal-button-container">
+          <div id="downloadBtn" class="download-button stobe-animation">
+            <i class="bi bi-cloud-arrow-down"></i> DOWNLOAD
+          </div>
+        </div>
+        <div class="modal-scrollmenu thumbnail-container">
+          <div
+            class="modal-pictures"
+            style="background-image: url(/images/1.png)"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/2.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/4.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/5.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/6.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/7.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/8.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/9.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/10.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/11.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/12.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/13.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/14.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/15.webp')"
+          ></div>
+          <!-- <div
+            class="modal-pictures"
+            style="background-image: url('/images/16.webp')"
+          ></div> -->
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/17.webp')"
+          ></div>
+          <!-- <div
+            class="modal-pictures"
+            style="background-image: url('/images/18.webp')"
+          ></div> -->
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/19.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/20.webp')"
+          ></div>
+          <!-- <div
+            class="modal-pictures"
+            style="background-image: url('/images/21.webp')"
+          ></div> -->
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/22.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/23.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/24.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/25.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/26.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/27.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/28.webp')"
+          ></div>
+          <!-- <div
+            class="modal-pictures"
+            style="background-image: url('/images/29.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/30.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/31.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/32.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/33.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/34.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/35.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/36.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/37.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/38.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/39.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/40.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/41.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/42.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/43.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/44.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/45.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/46.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/47.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/48.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/49.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/50.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/51.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/52.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/53.webp')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/54.webp')"
+          ></div>
+          
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/55.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/56.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/57.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/58.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/59.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/60.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/61.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/62.png')"
+          ></div>
+          
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/64.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/65.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/66.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/67.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/68.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/69.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/70.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/71.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/72.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/73.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/74.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/75.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/76.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/77.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/78.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/79.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/80.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/81.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/82.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/83.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/84.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/85.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/86.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/87.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/88.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/89.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/90.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/91.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/92.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/93.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/95.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/94.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/96.png')"
+          ></div>
+          <div
+            class="modal-pictures"
+            style="background-image: url('/images/97.png')"
+          ></div>
+        </div> -->
+      </div>
+    </div>
+    <div id="loading" class="loading">
+      <div>
+        <img
+          class="loading-img"
+          src="/images/loading.gif"
+          alt="running bear for loading"
+        />
+        <div class="loading-text">
+          <span class="loading-char">L</span>
+          <span class="loading-char">O</span>
+          <span class="loading-char">A</span>
+          <span class="loading-char">D</span>
+          <span class="loading-char">I</span>
+          <span class="loading-char">N</span>
+          <span class="loading-char">G</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/loading.js"></script>
+    <script src="/js/meme.js"></script>
+    <script defer src="/js/script.js"></script>
+  </body>
+</html>
